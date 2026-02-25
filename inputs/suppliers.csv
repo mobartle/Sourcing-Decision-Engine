@@ -1,0 +1,4 @@
+supplier_id,name,diversity_flag,esg_score
+SUP-A,Alpha Supply,false,82
+SUP-B,Beta Supply,true,75
+SUP-C,Gamma Supply,false,88
