@@ -1,0 +1,13 @@
+{
+  "weights": {
+    "cost": 0.40,
+    "service": 0.20,
+    "quality": 0.10,
+    "risk": 0.20,
+    "esg": 0.05,
+    "diversity": 0.05
+  },
+  "constraints": {
+    "max_suppliers": 2
+  }
+}
