@@ -1,0 +1,10 @@
+{
+  "request_id": "RQ1001",
+  "constraints": { "max_suppliers": 2 },
+  "feasibility_trace": {
+    "total_candidates": 3,
+    "feasible_candidates": 3,
+    "infeasible_candidates": 0,
+    "infeasible_breakdown": []
+  }
+}
