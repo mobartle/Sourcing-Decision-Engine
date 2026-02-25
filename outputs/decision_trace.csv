@@ -1,0 +1,2 @@
+request_id,timestamp_utc,max_suppliers,objective,total_candidates,feasible_candidates,infeasible_candidates,feasibility_rules
+RQ1001,2026-02-25T12:00:00Z,2,weighted_multi_factor_score,3,3,0,"QTY >= MOQ | QTY <= CAPACITY_MONTHLY"
