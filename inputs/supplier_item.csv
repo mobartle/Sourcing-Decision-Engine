@@ -1,0 +1,4 @@
+supplier_id,item_id,unit_price_usd,moq,lead_time_days,capacity_monthly
+SUP-A,LAPTOP-15,980,50,10,200
+SUP-B,LAPTOP-15,950,20,18,60
+SUP-C,LAPTOP-15,1020,10,7,150
