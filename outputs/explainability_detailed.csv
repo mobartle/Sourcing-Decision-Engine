@@ -1,0 +1,4 @@
+request_id,line_id,supplier_id,supplier_name,feasible_flag,unit_price_usd,lane_cost_usd,est_total_cost_usd,otif_pct,defect_ppm,cyber_risk,financial_risk,geo_risk,esg_score,diversity_flag,score_cost,score_service,score_quality,score_risk,score_esg,score_diversity,contrib_cost,contrib_service,contrib_quality,contrib_risk,contrib_esg,contrib_diversity,contrib_total,score_total
+RQ1001,1,SUP-C,Gamma Supply,1,1020,2500,104500,98,150,15,20,10,88,FALSE,0.000000,1.000000,1.000000,1.000000,1.000000,0.000000,0.000000,0.200000,0.100000,0.200000,0.050000,0.000000,0.550000,0.55
+RQ1001,1,SUP-A,Alpha Supply,1,980,2000,100000,96,300,20,25,15,82,FALSE,0.391304,0.645455,0.571429,0.500000,0.538462,0.000000,0.156522,0.129091,0.057143,0.100000,0.026923,0.000000,0.469679,0.494409
+RQ1001,1,SUP-B,Beta Supply,1,950,1500,96500,92,500,35,40,30,75,TRUE,1.000000,0.000000,0.000000,0.000000,0.000000,1.000000,0.400000,0.000000,0.000000,0.000000,0.000000,0.050000,0.450000,0.45
