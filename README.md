@@ -1,4 +1,4 @@
-# Sourcing Decision Engine (Example Repo)
+# Sourcing Decision Engine 
 
 This repo demonstrates a sourcing decision engine that:
 1) builds a feasible candidate set
