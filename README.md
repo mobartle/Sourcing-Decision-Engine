@@ -12,6 +12,8 @@ This repo demonstrates a sourcing decision engine that:
 ## Explainability Outputs
 - outputs/decision_trace.json: feasibility filtering and constraints applied
 - outputs/explainability.json: per-supplier breakdown of scores, contributions, and reason codes
+- outputs/explainability_detailed.csv - Deeper explainability dataset — enterprise audit ready
+- outputs/counterfactual_analysis.csv - Why challengers didn’t win
 
 ```bash
 python -m venv .venv
