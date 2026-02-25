@@ -1,0 +1,62 @@
+{
+  "request_id": "RQ1001",
+  "results": [
+    {
+      "request_id": "RQ1001",
+      "line_id": 1,
+      "recommendations": [
+        {
+          "supplier_id": "SUP-C",
+          "supplier_name": "Gamma Supply",
+          "score_total": 0.78,
+          "est_total_cost_usd": 104500.0,
+          "rationale": {
+            "cost_usd": 104500.0,
+            "components": {
+              "cost": 0.0,
+              "service": 1.0,
+              "quality": 1.0,
+              "risk": 1.0,
+              "esg": 1.0,
+              "diversity": 0.0
+            }
+          }
+        },
+        {
+          "supplier_id": "SUP-B",
+          "supplier_name": "Beta Supply",
+          "score_total": 0.67,
+          "est_total_cost_usd": 96500.0,
+          "rationale": {
+            "cost_usd": 96500.0,
+            "components": {
+              "cost": 1.0,
+              "service": 0.33,
+              "quality": 0.0,
+              "risk": 0.0,
+              "esg": 0.0,
+              "diversity": 1.0
+            }
+          }
+        },
+        {
+          "supplier_id": "SUP-A",
+          "supplier_name": "Alpha Supply",
+          "score_total": 0.65,
+          "est_total_cost_usd": 100000.0,
+          "rationale": {
+            "cost_usd": 100000.0,
+            "components": {
+              "cost": 0.62,
+              "service": 0.67,
+              "quality": 0.57,
+              "risk": 0.67,
+              "esg": 0.54,
+              "diversity": 0.0
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
