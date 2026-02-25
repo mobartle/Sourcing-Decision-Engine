@@ -1,0 +1,45 @@
+{
+  "request_id": "RQ1001",
+  "lines": [
+    {
+      "line_id": 1,
+      "winner_by_score": {
+        "supplier_id": "SUP-C",
+        "supplier_name": "Gamma Supply",
+        "score_total": 0.78,
+        "reasons": [
+          { "code": "SERVICE_STRONG", "detail": "High OTIF and/or short total lead+transit time." },
+          { "code": "QUALITY_STRONG", "detail": "Low defects relative to other options." },
+          { "code": "RISK_LOW", "detail": "Lower combined cyber/financial/geo risk vs peers." },
+          { "code": "ESG_STRONG", "detail": "Higher ESG score vs peers." }
+        ]
+      },
+      "weights_used": { "cost": 0.4, "service": 0.2, "quality": 0.1, "risk": 0.2, "esg": 0.05, "diversity": 0.05 },
+      "counterfactuals_vs_winner": [
+        {
+          "challenger_supplier_id": "SUP-B",
+          "result": {
+            "status": "requires_multiple_levers",
+            "gap_to_winner": 0.11,
+            "best_lever": "service",
+            "lever_weight": 0.2,
+            "challenger_lever_score": 0.33,
+            "required_increase_in_lever_score": 0.55,
+            "note": "This is a simplified counterfactual based on normalized component scores (0..1)."
+          }
+        }
+      ],
+      "suppliers": [
+        {
+          "supplier_id": "SUP-C",
+          "supplier_name": "Gamma Supply",
+          "inputs": { "est_total_cost_usd": 104500.0, "otif_pct": 98.0, "defect_ppm": 150.0, "cyber_risk": 15.0, "esg_score": 88.0, "diversity_flag": false },
+          "normalized_scores": { "cost": 0.0, "service": 1.0, "quality": 1.0, "risk": 1.0, "esg": 1.0, "diversity": 0.0 },
+          "contributions": { "cost": 0.0, "service": 0.2, "quality": 0.1, "risk": 0.2, "esg": 0.05, "diversity": 0.0, "total": 0.55 },
+          "score_total": 0.78,
+          "reason_codes": [ ... ]
+        }
+      ]
+    }
+  ]
+}
