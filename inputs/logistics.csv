@@ -1,0 +1,4 @@
+supplier_id,ship_to,lane_cost_usd,transit_days
+SUP-A,NYC-DC,2000,3
+SUP-B,NYC-DC,1500,4
+SUP-C,NYC-DC,2500,2
