@@ -8,6 +8,11 @@ This repo demonstrates a sourcing decision engine that:
 
 ## Quickstart
 
+
+## Explainability Outputs
+- outputs/decision_trace.json: feasibility filtering and constraints applied
+- outputs/explainability.json: per-supplier breakdown of scores, contributions, and reason codes
+
 ```bash
 python -m venv .venv
 source .venv/bin/activate   # Windows: .venv\Scripts\activate
