@@ -1,0 +1,4 @@
+request_id,line_id,supplier_id,supplier_name,score_total,is_winner,reason_codes
+RQ1001,1,SUP-C,Gamma Supply,0.55,TRUE,"SERVICE_STRONG | QUALITY_STRONG | RISK_LOW | ESG_STRONG"
+RQ1001,1,SUP-A,Alpha Supply,0.494409,FALSE,"BALANCED_OPTION"
+RQ1001,1,SUP-B,Beta Supply,0.45,FALSE,"COST_ADVANTAGE | DIVERSE_SUPPLIER"
