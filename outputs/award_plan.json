@@ -1,0 +1,16 @@
+{
+  "request_id": "RQ1001",
+  "plans": [
+    {
+      "request_id": "RQ1001",
+      "line_id": 1,
+      "objective": "minimize_unit_cost",
+      "max_suppliers": 2,
+      "award_plan": [
+        { "supplier_id": "SUP-B", "award_qty": 60.0, "unit_price_usd": 950.0 },
+        { "supplier_id": "SUP-A", "award_qty": 40.0, "unit_price_usd": 980.0 }
+      ],
+      "purchase_cost_usd": 96200.0
+    }
+  ]
+}
