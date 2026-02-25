@@ -1,0 +1,68 @@
+-- Snowflake example: create a candidate view for a given request batch
+create or replace view V_SOURCING_CANDIDATES as
+with base as (
+  select
+    r.request_id,
+    r.line_id,
+    r.item_id,
+    r.qty as request_qty,
+    r.ship_to,
+    r.required_date,
+    si.supplier_id,
+    -- pricing
+    coalesce(c.price, si.unit_price) as unit_price_ccy,
+    coalesce(c.currency, si.currency) as currency,
+    fx.usd_rate,
+    (coalesce(c.price, si.unit_price) * fx.usd_rate) as unit_price_usd,
+    -- constraints
+    si.moq,
+    si.lead_time_days,
+    si.capacity_monthly,
+    -- perf + risk
+    p.otif_pct,
+    p.defect_ppm,
+    k.cyber_risk,
+    k.financial_risk,
+    k.geo_risk,
+    d.diversity_flag,
+    s.esg_score,
+    -- logistics
+    l.lane_cost,
+    l.transit_days
+  from FACT_REQUEST_LINES r
+  join FACT_SUPPLIER_ITEM si
+    on si.item_id = r.item_id
+  join DIM_SUPPLIER s
+    on s.supplier_id = si.supplier_id
+  left join FACT_CONTRACT c
+    on c.supplier_id = si.supplier_id
+   and c.item_id = r.item_id
+   and current_date between c.effective_dt and c.expiry_dt
+  left join FX_RATES fx
+    on fx.ccy = coalesce(c.currency, si.currency)
+   and fx.as_of_dt = (select max(as_of_dt) from FX_RATES)
+  left join FACT_PERFORMANCE p
+    on p.supplier_id = si.supplier_id
+   and p.item_id = r.item_id
+  left join FACT_RISK k
+    on k.supplier_id = si.supplier_id
+  left join FACT_LOGISTICS l
+    on l.supplier_id = si.supplier_id
+   and l.ship_to = r.ship_to
+  left join DIM_DIVERSITY d
+    on d.supplier_id = si.supplier_id
+),
+feasible as (
+  select
+    *,
+    case
+      when request_qty < moq then 0
+      when lead_time_days + transit_days > datediff('day', current_date, required_date) then 0
+      when request_qty > capacity_monthly then 0
+      else 1
+    end as feasible_flag,
+    -- total landed cost estimate
+    (unit_price_usd * request_qty) + coalesce(lane_cost,0) as est_total_cost_usd
+  from base
+)
+select * from feasible;
