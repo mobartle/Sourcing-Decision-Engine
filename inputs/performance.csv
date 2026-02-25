@@ -1,0 +1,4 @@
+supplier_id,item_id,otif_pct,defect_ppm
+SUP-A,LAPTOP-15,96,300
+SUP-B,LAPTOP-15,92,500
+SUP-C,LAPTOP-15,98,150
