@@ -1,5 +1,7 @@
 # Sourcing Decision Engine 
 
+By: Matthew Bartley
+
 This repo demonstrates a sourcing decision engine that:
 1) builds a feasible candidate set
 2) scores suppliers using configurable weights (transparent, explainable)
